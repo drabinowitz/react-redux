@@ -1,4 +1,5 @@
-import React from 'react';
-import createAll from './components/createAll';
+import Provider, { createProvider } from './components/Provider'
+import connectAdvanced from './components/connectAdvanced'
+import connect from './connect/connect'
 
-export const { Provider, Connector, provide, connect } = createAll(React);
+export { Provider, createProvider, connectAdvanced, connect }
