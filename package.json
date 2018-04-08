@@ -1,7 +1,7 @@
 {
-  "name": "react-redux",
-  "version": "5.0.7",
-  "description": "Official React bindings for Redux",
+  "name": "react-redux-context",
+  "version": "0.1.0",
+  "description": "Context based React bindings for Redux",
   "main": "./lib/index.js",
   "module": "es/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactjs/react-redux.git"
+    "url": "https://github.com/drabinowitz/react-redux-context.git"
   },
   "files": [
     "dist",
@@ -37,12 +37,12 @@
     "flux",
     "redux"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "Dmitri Rabinowitz <dmitrirabinowitz@gmail.com> (http://github.com/drabinowitz)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/reactjs/react-redux/issues"
+    "url": "https://github.com/drabinowitz/react-redux-context/issues"
   },
-  "homepage": "https://github.com/reactjs/react-redux",
+  "homepage": "https://github.com/drabinowitz/react-redux-context",
   "peerDependencies": {
     "react": "^16.3.0",
     "redux": "^2.0.0 || ^3.0.0 || ^4.0.0-0"
