@@ -71,7 +71,7 @@ export default function connect (
       }
 
       shouldComponentUpdate (_, { propsToPass }) {
-        return shallowEqual(propsToPass, this.state.propsToPass);
+        return !shallowEqual(propsToPass, this.state.propsToPass);
       }
 
       render () {
