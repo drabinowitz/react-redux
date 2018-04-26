@@ -1,6 +1,6 @@
 {
   "name": "react-redux-context",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Context based React bindings for Redux",
   "main": "./lib/index.js",
   "module": "es/index.js",
