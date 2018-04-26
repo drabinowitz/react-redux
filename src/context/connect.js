@@ -54,6 +54,7 @@ export default function connect (
       constructor (props) {
         super(props);
         this.reduxContext = { ProviderLens };
+        this.state = {};
       }
 
       static getDerivedStateFromProps (nextProps) {
