@@ -24,7 +24,15 @@
     "react/jsx-no-undef": 2,
     "react/jsx-wrap-multilines": 2,
     "react/no-string-refs": 0,
-    "indent": ["error", 2]
+    "indent": ["error", 2],
+    "semi": [2, "always"],
+      "comma-dangle": [2, {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "always-multiline"
+    }]
   },
   "plugins": [
     "import",
