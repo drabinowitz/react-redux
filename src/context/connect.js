@@ -57,10 +57,8 @@ export default function connect (
       }
 
       static getDerivedStateFromProps (nextProps) {
-        const rest = Object.assign({}, nextProps);
-        delete rest.forwardedRef;
-
-        const storeData = nextProps._rccStoreData;
+        const rest = nextProps.props;
+        const storeData = nextProps.storeData;
 
         return {
           propsToPass: defaultMergeProps(
@@ -93,8 +91,8 @@ export default function connect (
       <StoreContext.Consumer>
         { (storeData) => (
           <ConnectedComponent
-            {...props}
-            _rrcStoreData={ storeData }
+            props={ props }
+            storeData={ storeData }
             forwardedRef={ ref }
           />
         ) }
