@@ -1,5 +1,4 @@
-import Provider, { createProvider } from './components/Provider'
-import connectAdvanced from './components/connectAdvanced'
-import connect from './connect/connect'
+import Provider from './context/Provider';
+import connect from './context/connect';
 
-export { Provider, createProvider, connectAdvanced, connect }
+export { Provider, connect };
