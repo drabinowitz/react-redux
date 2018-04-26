@@ -1,33 +1,33 @@
-import nodeResolve from 'rollup-plugin-node-resolve'
-import babel from 'rollup-plugin-babel'
-import replace from 'rollup-plugin-replace'
-import commonjs from 'rollup-plugin-commonjs'
-import uglify from 'rollup-plugin-uglify'
+import nodeResolve from 'rollup-plugin-node-resolve';
+import babel from 'rollup-plugin-babel';
+import replace from 'rollup-plugin-replace';
+import commonjs from 'rollup-plugin-commonjs';
+import uglify from 'rollup-plugin-uglify';
 
-const env = process.env.NODE_ENV
+const env = process.env.NODE_ENV;
 
 const config = {
   input: 'src/index.js',
   external: ['react', 'redux'],
   output: {
     format: 'umd',
-    name: 'ReactRedux',
+    name: 'ReactReduxContext',
     globals: {
       react: 'React',
-      redux: 'Redux'
-    }
+      redux: 'Redux',
+    },
   },
   plugins: [
     nodeResolve(),
     babel({
-      exclude: '**/node_modules/**'
+      exclude: '**/node_modules/**',
     }),
     replace({
-      'process.env.NODE_ENV': JSON.stringify(env)
+      'process.env.NODE_ENV': JSON.stringify(env),
     }),
-    commonjs()
-  ]
-}
+    commonjs(),
+  ],
+};
 
 if (env === 'production') {
   config.plugins.push(
@@ -36,10 +36,10 @@ if (env === 'production') {
         pure_getters: true,
         unsafe: true,
         unsafe_comps: true,
-        warnings: false
-      }
-    })
-  )
+        warnings: false,
+      },
+    }),
+  );
 }
 
-export default config
+export default config;
